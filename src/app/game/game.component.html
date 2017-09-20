@@ -1,0 +1,18 @@
+<p>
+  {{title}}
+</p>
+
+<hr>
+
+<button class="btn btn-primary" disabled> User : o</button> 
+<button class="btn btn-primary" disabled> Computer: X</button><br><br>
+<button  class="btn btn-primary">Start New Game</button><br><br>
+
+<div class="row" *ngFor="let row of matrix; let i = index">
+  <div class="col" *ngFor="let col of row, let j = index"  >
+       <div id="boxData" (click)="upDate(i, j)">{{col}}<div>
+  </div>
+</div>
+
+
+
